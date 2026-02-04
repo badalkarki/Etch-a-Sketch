@@ -19,7 +19,7 @@ body{
     flex-wrap: wrap;
 
 }
-.child{
+.childRows{
     border: 1px solid black;
     width: 2px;
     aspect-ratio: 1 / 1;

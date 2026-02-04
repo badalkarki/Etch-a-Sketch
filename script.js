@@ -1,11 +1,15 @@
-function setChildDiv (gridSize) {
+function setChildRowsDiv (gridSize) {
     const parentDiv = document.querySelector(".container");
     for(let i = 0; i < (gridSize * gridSize) + gridSize; i++) {
-        const childDiv = document.createElement("div");
-        childDiv.classList.add("child");
-        parentDiv.appendChild(childDiv);
+        const childRowsDiv = document.createElement("div");
+        childRowsDiv.classList.add("childRows");
+        parentDiv.appendChild(childRowsDiv);
     }
 }
+
+// function setchildColsDiv(){
+//     const document.querySelectorAll(".")
+// }
 
 function setInkTrailStyle() {
     const childDiv = document.querySelectorAll(".child");
@@ -30,7 +34,7 @@ btn.addEventListener("click",() => {
 function alterGridSize (gridSize) {
     removePreviousGrid(); 
     if (gridSize >=4 && gridSize <= 100) { 
-        setChildDiv(gridSize);
+        setChildRowsDiv(gridSize);
     }else{
     alert("Enter number between the range");
     }
@@ -43,11 +47,5 @@ function removePreviousGrid () {
     })
 }
 
-    // const gridNo = gridSize + 1;
-    // const nthChildDiv = document.querySelector(`.child:nth-child(${gridNo+1})`);
-    // nthChildDiv.style.cssText = "width: 100%; border: 0; height: 0;"
-    
-
-
-  setChildDiv(28);
+  setChildRowsDiv(28);
   setInkTrailStyle();
