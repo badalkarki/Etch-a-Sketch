@@ -25,7 +25,7 @@ body{
     aspect-ratio: 1 / 1;
     flex-grow: 1;
 }
-.container > .child:nth-child(29n+1) {
+.child:nth-child(29n+1) {
     width: 100%;
     border: 0;
     height: 0 !important;

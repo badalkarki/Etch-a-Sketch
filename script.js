@@ -43,5 +43,11 @@ function removePreviousGrid () {
     })
 }
 
+    // const gridNo = gridSize + 1;
+    // const nthChildDiv = document.querySelector(`.child:nth-child(${gridNo+1})`);
+    // nthChildDiv.style.cssText = "width: 100%; border: 0; height: 0;"
+    
+
+
   setChildDiv(28);
   setInkTrailStyle();
