@@ -13,6 +13,7 @@ body{
 }
 .container{
     display: flex;
+    flex-direction: column;
     width: 420px;
     aspect-ratio: 1 / 1;
     border:2px solid black;
@@ -20,10 +21,15 @@ body{
 
 }
 .childRows{
+    display: flex;
+}
+.childRows, .childCols{
     border: 1px solid black;
     aspect-ratio: 1 / 1;
     flex-grow: 1;
 }
+
+
 button {
     padding: 10px;
     border-radius: 4px;
