@@ -23,7 +23,7 @@ body{
     flex-wrap: wrap;
 }
 .childRows, .childCols{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     flex-grow: 1;
 }
 

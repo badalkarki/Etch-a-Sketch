@@ -32,7 +32,7 @@ function setInkTrailStyle() {
 const btn = document.querySelector("button");
 let gridSize;
 btn.addEventListener("click",() => {
-    gridSize = +prompt("Enter number betwn 4-100 to change grid size");
+    gridSize = +prompt("Number of squares per side on new grid");
     console.log(gridSize);       
     alterGridSize(gridSize);
     setInkTrailStyle();
@@ -60,3 +60,4 @@ function removePreviousGrid () {
   setChildRowsDiv(8);
   setChildColsDiv(8);
   setInkTrailStyle();
+
