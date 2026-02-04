@@ -21,16 +21,9 @@ body{
 }
 .childRows{
     border: 1px solid black;
-    width: 2px;
     aspect-ratio: 1 / 1;
     flex-grow: 1;
 }
-.child:nth-child(29n+1) {
-    width: 100%;
-    border: 0;
-    height: 0 !important;
-}
-
 button {
     padding: 10px;
     border-radius: 4px;
