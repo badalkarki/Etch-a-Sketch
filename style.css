@@ -9,23 +9,26 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 60px;
 }
 .container{
     display: flex;
+    width: 420px;
+    aspect-ratio: 1 / 1;
+    border:2px solid black;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+
 }
 .child{
     border: 1px solid black;
-    height: 30px;
-    width: 30px;
+    width: 2px;
+    aspect-ratio: 1 / 1;
+    flex-grow: 1;
 }
-.container > .child:nth-child(16n+1) {
+.container > .child:nth-child(29n+1) {
     width: 100%;
     border: 0;
-    height: 0;
+    height: 0 !important;
 }
 
 button {
