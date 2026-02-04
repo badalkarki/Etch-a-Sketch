@@ -1,17 +1,16 @@
-function setChildRowsDiv () {
+function setChildRowsDiv (gridSize) {
     const parentDiv = document.querySelector(".container");
-    for(let i = 0; i < 8; i++) {
+    for(let i = 0; i < gridSize; i++) {
         const childRowsDiv = document.createElement("div");
         childRowsDiv.classList.add("childRows");
         parentDiv.appendChild(childRowsDiv);
     }
 }
 
-function setChildColsDiv(){
+function setChildColsDiv(gridSize){
     const childRowsDiv = document.querySelectorAll(".childRows");
-    console.log(childRowsDiv);
     childRowsDiv.forEach(rows => {
-        for(let i = 0; i < 8; i++){
+        for(let i = 0; i < gridSize; i++){
              const childColsDiv = document.createElement("div");
              childColsDiv.classList.add("childCols");
              rows.appendChild(childColsDiv);
@@ -21,15 +20,15 @@ function setChildColsDiv(){
 
 
 function setInkTrailStyle() {
-    const childDiv = document.querySelectorAll(".child");
-    childDiv.forEach(div => {
+    const childColsDiv = document.querySelectorAll(".childCols");
+    childColsDiv.forEach(div => {
         div.addEventListener("mouseover", () => {
             div.style.setProperty("background-color"," rgb(180,255,180)")
          })
     }) 
 }
 
-
+//  click event listener
 const btn = document.querySelector("button");
 let gridSize;
 btn.addEventListener("click",() => {
@@ -44,17 +43,20 @@ function alterGridSize (gridSize) {
     removePreviousGrid(); 
     if (gridSize >=4 && gridSize <= 100) { 
         setChildRowsDiv(gridSize);
+        setChildColsDiv(gridSize);
     }else{
-    alert("Enter number between the range");
+    alert("Enter number between the range of 4 - 100");
+    setChildRowsDiv(8);
+    setChildColsDiv(8);
     }
 }
 
 function removePreviousGrid () {
-    const childDiv = document.querySelectorAll(".child");
-    childDiv.forEach(div => {
+    const childRowsDiv = document.querySelectorAll(".childRows");
+    childRowsDiv.forEach(div => {
         div.remove()
     })
 }
-  setChildRowsDiv();
-  setChildColsDiv();
+  setChildRowsDiv(8);
+  setChildColsDiv(8);
   setInkTrailStyle();
