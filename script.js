@@ -18,12 +18,16 @@ function setChildColsDiv(gridSize){
     })
 }
 
+function randomNumber(num) {
+   return Math.floor(Math.random() * num)
+}
 
 function setInkTrailStyle() {
     const childColsDiv = document.querySelectorAll(".childCols");
     childColsDiv.forEach(div => {
         div.addEventListener("mouseover", () => {
-            div.style.setProperty("background-color"," rgb(180,255,180)")
+            const randomColor = `rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)})`;
+            div.style.backgroundColor = randomColor; // to make color dyammic
          })
     }) 
 }
