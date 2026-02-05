@@ -27,7 +27,7 @@ function setInkTrailStyle() {
     childColsDiv.forEach(div => {
         div.addEventListener("mouseover", () => {
             const randomColor = `rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)})`;
-            div.style.backgroundColor = randomColor; // to make color dyammic
+            div.style.backgroundColor = randomColor;
          })
     }) 
 }
@@ -70,7 +70,6 @@ resetBtn.addEventListener("click", () => {
     setInkTrailStyle();
 
 })
-
 
     setChildRowsDiv(8);
     setChildColsDiv(8);
