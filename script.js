@@ -61,7 +61,17 @@ function removePreviousGrid () {
         div.remove()
     })
 }
-  setChildRowsDiv(8);
-  setChildColsDiv(8);
-  setInkTrailStyle();
 
+const resetBtn = document.querySelector("#resetBtn");
+resetBtn.addEventListener("click", () => {
+    removePreviousGrid(); 
+    setChildRowsDiv(8);
+    setChildColsDiv(8);
+    setInkTrailStyle();
+
+})
+
+
+    setChildRowsDiv(8);
+    setChildColsDiv(8);
+    setInkTrailStyle();

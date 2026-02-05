@@ -32,4 +32,5 @@ button {
     border-radius: 4px;
     font-size: larger;
     background-color: bisque;
+    cursor: pointer;
 }
